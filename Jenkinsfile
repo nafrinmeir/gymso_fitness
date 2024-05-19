@@ -56,7 +56,7 @@ pipeline {
                     fi
                     '''
                     // Run the Docker container with a specific name
-                    sh 'docker run -d --name ${CONTAINER_NAME} -p 8083:81 ${DOCKER_IMAGE}:${DOCKER_TAG}'
+                    sh 'docker run -d --name ${CONTAINER_NAME} -p 8083:80 ${DOCKER_IMAGE}:${DOCKER_TAG}'
                 }
             }
         }
