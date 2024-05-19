@@ -5,7 +5,7 @@ pipeline {
         DOCKER_IMAGE = 'nginx'
         DOCKER_TAG = 'latest'
         CONTAINER_NAME = 'my_fitness_app'
-        REPO_URL = 'https://github.com/nafrinmeir/class.git'
+        REPO_URL = 'https://github.com/nafrinmeir/gymso_fitness.git'
         REPO_DIR = 'class'
     }
 
