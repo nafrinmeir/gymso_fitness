@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'nginx'
         DOCKER_TAG = 'latest'
-        CONTAINER_NAME = 'my_nginx_container'
+        CONTAINER_NAME = 'my_fitness_app'
         REPO_URL = 'https://github.com/nafrinmeir/class.git'
         REPO_DIR = 'class'
     }
@@ -51,12 +51,12 @@ pipeline {
                 script {
                     // Stop any service using the port (e.g., another container)
                     sh '''
-                    if [ $(lsof -t -i:8082) ]; then
-                        kill -9 $(lsof -t -i:8082) || true
+                    if [ $(lsof -t -i:8083) ]; then
+                        kill -9 $(lsof -t -i:8083) || true
                     fi
                     '''
                     // Run the Docker container with a specific name
-                    sh 'docker run -d --name ${CONTAINER_NAME} -p 8082:80 ${DOCKER_IMAGE}:${DOCKER_TAG}'
+                    sh 'docker run -d --name ${CONTAINER_NAME} -p 8083:80 ${DOCKER_IMAGE}:${DOCKER_TAG}'
                 }
             }
         }
