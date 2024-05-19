@@ -5,7 +5,7 @@ FROM nginx:latest
 # --- COPY nginx.conf /etc/nginx/nginx.conf
 
 # Copy the static content into the Nginx document root
-COPY . /usr/share/nginx/index.html
+COPY . /usr/share/nginx/html
 
 # Expose port 8083
 EXPOSE 8083
